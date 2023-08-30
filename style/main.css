@@ -1,0 +1,367 @@
+/* X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  --orange-25: #fff9f5;
+  --orange-50: #fff4ed;
+  --orange-100: #ffe6d5;
+  --orange-200: #ffd6ae;
+  --orange-300: #ff9c66;
+  --orange-400: #ff692e;
+  --orange-500: #ff4405;
+  --orange-600: #e62e05;
+  --orange-700: #bc1b06;
+  --orange-800: #97180c;
+  --orange-900: #771a0d;
+  --orange-950: #57130a;
+
+  --red-25: #fffbfa;
+  --red-50: #fef3f2;
+  --red-100: #fee4e2;
+  --red-200: #fecdca;
+  --red-300: #fda29b;
+  --red-400: #f97066;
+  --red-500: #f04438;
+  --red-600: #d92d20;
+  --red-700: #b42318;
+  --red-800: #912018;
+  --red-900: #7a271a;
+  --red-950: #55160c;
+
+  --gray-25: #fcfcfd;
+  --gray-50: #f9fafb;
+  --gray-100: #f2f4f7;
+  --gray-200: #eaecf0;
+  --gray-300: #d0d5dd;
+  --gray-400: #98a2b3;
+  --gray-500: #667085;
+  --gray-600: #475467;
+  --gray-700: #344054;
+  --gray-900: #101828;
+  --gray-950: #0c111d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.list--none {
+  list-style-type: none;
+}
+
+.list--inline li {
+  display: inline-block;
+}
+
+.link--no-underline {
+  text-decoration: none;
+}
+
+/* BUTTONS */
+button {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.button--sm {
+  height: 37px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.button--md {
+  height: 41px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.button--lg {
+  height: 48px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.button-icon--left i {
+  margin-right: 8px;
+}
+
+.button-icon--right i {
+  margin-left: 8px;
+}
+
+.fab {
+  background-color: transparent;
+}
+
+.fab--xs {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.fab--sm {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.fab--md {
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.fab--lg {
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.fab--xl {
+  border-radius: 100%;
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  font-size: 16px;
+}
+
+.button--primary {
+  color: #fff;
+  background-color: var(--orange-600);
+}
+
+.button--primary:hover {
+  background-color: var(--orange-700);
+}
+
+.button--primary:focus {
+  outline: 3px solid var(--orange-100);
+}
+
+.button--primary:disabled {
+  background-color: var(--orange-200);
+}
+
+.button--outline {
+  color: var(--gray-700);
+  background-color: #fff;
+  border: 1px solid var(--orange-300);
+}
+
+.button--outline:hover {
+  background-color: var(--orange-50);
+}
+
+.button--outline:focus {
+  background-color: #fff;
+  border: 1px solid var(--orange-300);
+  outline: 3px solid var(--orange-100);
+}
+
+.button--outline:disabled {
+  color: var(--gray-300);
+  background-color: #fff;
+  border: 1px solid var(--orange-200);
+}
+
+/* FORM */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.hint {
+  color: var(--gray-600);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.hint--error {
+  color: var(--red-500);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+::placeholder {
+  color: var(--gray-500);
+}
+
+input,
+select,
+textarea {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--gray-300);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  font: normal 16px/120% "Open Sans", sans-serif;
+  color: var(--gray-900);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border: 1px solid var(--orange-300);
+  box-shadow: 0px 0px 0px 4px var(--orange-100),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  outline: none;
+}
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border: 1px solid var(--red-300);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  outline: none;
+}
+input:invalid:focus-visible {
+  box-shadow: 0px 0px 0px 4px var(--red-100),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.input--md {
+  padding: 10px 14px;
+}
+
+/* HERO */
+
+.hero {
+  width: 100%;
+  height: 400px;
+  background-color: var(--orange-100);
+  border-radius: 16px;
+  margin: 16px 0;
+}
+
+/* BREADCRUMB */
+.breadcrumb__link a{
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.breadcrumb__link::after {
+    content: url(../assets/icons/chevron-right.svg);
+    margin: 0 8px;
+}
+.breadcrumb__link:last-child:after {
+    content: none;
+}
+
+.breadcrumb__link--active a{
+    color: var(--gray-700);
+    font-weight: 600;
+}
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
+.container-fluid {
+  width: 100%;
+  margin: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    width: 540px;
+  }
+
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl,
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container,
+  .container-sm,
+  .container-md {
+    width: 720px;
+  }
+
+  .container-lg,
+  .container-xl,
+  .container-xxl,
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    width: 960px;
+  }
+
+  .container-xl,
+  .container-xxl,
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    width: 1140px;
+  }
+
+  .container-xxl,
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    width: 1320px;
+  }
+
+  .container-fluid {
+    width: 100%;
+  }
+}
