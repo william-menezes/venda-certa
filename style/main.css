@@ -49,6 +49,11 @@
   padding: 0;
 
   font-family: "Open Sans", sans-serif;
+  color: var(--gray-600);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--gray-900);
 }
 
 .list--none {
@@ -185,6 +190,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-bottom: 24px;
 }
 
 .label {
@@ -251,7 +257,8 @@ input:invalid:focus-visible {
 .hero {
   width: 100%;
   height: 400px;
-  background-color: var(--orange-100);
+  background: var(--orange-100) url("../assets/images/girl-headphone.jpg") no-repeat center;
+  background-size: cover;
   border-radius: 16px;
   margin: 16px 0;
 }
@@ -273,6 +280,17 @@ input:invalid:focus-visible {
 .breadcrumb__link--active a{
     color: var(--gray-700);
     font-weight: 600;
+}
+
+/* BOOTSTRAP CLASSES */
+.w-100 {
+  width: 100%;
+}
+.vw-100 {
+  width: 100vw;
+}
+.vh-100 {
+  width: 100vh;
 }
 
 .container,
