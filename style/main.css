@@ -52,7 +52,11 @@
   color: var(--gray-600);
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   color: var(--gray-900);
 }
 
@@ -146,6 +150,10 @@ button {
   font-size: 16px;
 }
 
+.fab:hover i {
+  color: var(--orange-600);
+}
+
 .button--primary {
   color: #fff;
   background-color: var(--orange-600);
@@ -161,6 +169,10 @@ button {
 
 .button--primary:disabled {
   background-color: var(--orange-200);
+}
+
+.button--primary i {
+  color: #fff;
 }
 
 .button--outline {
@@ -205,6 +217,7 @@ button {
   font-weight: 400;
   line-height: 20px;
 }
+
 .hint--error {
   color: var(--red-500);
   font-size: 14px;
@@ -236,6 +249,7 @@ textarea:focus-visible {
     0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   outline: none;
 }
+
 input:invalid,
 select:invalid,
 textarea:invalid {
@@ -243,6 +257,7 @@ textarea:invalid {
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   outline: none;
 }
+
 input:invalid:focus-visible {
   box-shadow: 0px 0px 0px 4px var(--red-100),
     0px 1px 2px 0px rgba(16, 24, 40, 0.05);
@@ -252,6 +267,83 @@ input:invalid:focus-visible {
   padding: 10px 14px;
 }
 
+/* BREADCRUMB */
+.breadcrumb__link a {
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.breadcrumb__link::after {
+  content: url(../assets/icons/chevron-right.svg);
+  margin: 0 8px;
+}
+
+.breadcrumb__link:last-child:after {
+  content: none;
+}
+
+.breadcrumb__link--active a {
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
+/* BADGES */
+.badge {
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-right: 8px;
+  padding: 4px 14px;
+  border: 1px solid;
+  border-radius: 16px;
+}
+
+.badge--orange {
+  background-color: var(--orange-50);
+  border-color: var(--orange-200);
+  color: var(--orange-700);
+}
+
+/* SEARCHBAR */
+.search-wrapper {
+ /*  display: none; */ /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  padding-top: 75px;
+}
+
+.search-wrapper__fields {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.search-wrapper__fields input {
+  width: calc(100% - 140px);
+  border: none;
+  box-shadow: none;
+}
+:is(.search-wrapper__fields) :is(button, input):focus-visible {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+
+/* GENERAL CLASSES */
+.section__title {
+  color: var(--gray-600);
+}
+
 /* HERO */
 
 .hero {
@@ -259,36 +351,18 @@ input:invalid:focus-visible {
   height: 400px;
   background: var(--orange-100) url("../assets/images/girl-headphone.jpg") no-repeat center;
   background-size: cover;
-  border-radius: 16px;
   margin: 16px 0;
-}
-
-/* BREADCRUMB */
-.breadcrumb__link a{
-    color: var(--gray-600);
-    font-weight: 500;
-}
-
-.breadcrumb__link::after {
-    content: url(../assets/icons/chevron-right.svg);
-    margin: 0 8px;
-}
-.breadcrumb__link:last-child:after {
-    content: none;
-}
-
-.breadcrumb__link--active a{
-    color: var(--gray-700);
-    font-weight: 600;
 }
 
 /* BOOTSTRAP CLASSES */
 .w-100 {
   width: 100%;
 }
+
 .vw-100 {
   width: 100vw;
 }
+
 .vh-100 {
   width: 100vh;
 }
@@ -306,6 +380,7 @@ input:invalid:focus-visible {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+
   .container,
   .container-sm {
     width: 540px;
@@ -322,6 +397,10 @@ input:invalid:focus-visible {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .hero {
+    border-radius: 16px;
+  }
+
   .container,
   .container-sm,
   .container-md {
@@ -338,6 +417,7 @@ input:invalid:focus-visible {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
   .container,
   .container-sm,
   .container-md,
@@ -354,6 +434,7 @@ input:invalid:focus-visible {
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
   .container,
   .container-sm,
   .container-md,
@@ -370,6 +451,7 @@ input:invalid:focus-visible {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+
   .container,
   .container-sm,
   .container-md,

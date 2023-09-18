@@ -6,7 +6,11 @@
     <link rel="stylesheet" href="/style/main.css" />
     <link rel="stylesheet" href="/style/navbar.css" />
 
-    <link rel="shortcut icon" href="./assets/logo/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/logo/favicon.ico"
+      type="image/x-icon"
+    />
 
     <!-- Bootstrap Icons -->
     <link
@@ -24,19 +28,20 @@
 
         <ul class="navbar__links list--none list--inline">
           <li class="navbar__link">
-            <a href="#" class="link--no-underline">Anuncios recentes</a>
+            <a href="#recent-announcements" class="link--no-underline"
+              >Anuncios recentes</a
+            >
           </li>
           <li class="navbar__link">
             <a href="#" class="link--no-underline">Categorias</a>
           </li>
         </ul>
 
+        <button class="fab fab--md" onclick="">
+          <i class="bi bi-search"></i>
+        </button>
+
         <ul class="navbar__cta list--none list--inline">
-            <li class="navbar__link">
-                <button class="fab fab--md">
-                    <i class="bi bi-search"></i>
-                </button>
-            </li>
           <li class="navbar__link">
             <a href="#" class="link--no-underline"
               ><i class="bi bi-chat"></i> Chat</a
@@ -56,16 +61,46 @@
     </header>
 
     <main>
-      <div class="container">
-        <section class="hero"></section>
+      <div id="searchbar" class="search-wrapper">
+        <div class="search-wrapper__fields container">
+          <button class="button--md search-wrapper__button--filter">
+            Filtrar <i class="bi bi-filter"></i>
+          </button>
 
-        <ul class="breadcrumb list--none list--inline">
-          <li class="breadcrumb__link"><a class="link--no-underline" href="#">Home</a></li>
-          <li class="breadcrumb__link"><a class="link--no-underline" href="#">Anúncios</a></li>
-          <li class="breadcrumb__link breadcrumb__link--active"><a class="link--no-underline" href="#">Categorias</a></li>
-        </ul>
-        
+          <input class="input--md search-wrapper__input" type="text" name="" id="" placeholder="Procurar por...">
+
+          <button class="button--primary button--md fab--sm">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+
+        <div class="search-wrapper__filters container">
+          
+        </div>
       </div>
+
+      <section class="hero container"></section>
+
+      <div class="container">
+        <span class="badge badge--blue"> Computadores </span>
+        <span class="badge badge--green"> Celulares </span>
+        <span class="badge badge--orange"> Eletrônicos </span>
+        <ul class="breadcrumb list--none list--inline">
+          <li class="breadcrumb__link">
+            <a class="link--no-underline" href="#">Home</a>
+          </li>
+          <li class="breadcrumb__link">
+            <a class="link--no-underline" href="#">Anúncios</a>
+          </li>
+          <li class="breadcrumb__link breadcrumb__link--active">
+            <a class="link--no-underline" href="#">Categorias</a>
+          </li>
+        </ul>
+      </div>
+
+      <section id="recent-announcements" class="recent-announcements container">
+        <h2 class="section__title">Anúncios recentes</h2>
+      </section>
     </main>
 
     <footer></footer>
