@@ -179,6 +179,26 @@ button {
   color: #fff;
 }
 
+.button--secundary {
+  color: var(--orange-700);
+  background-color: #fff;
+}
+
+.button--secundary:hover {
+  color: var(--orange-800);
+  background-color: var(--orange-50);
+}
+
+.button--secundary:focus {
+  color: var(--orange-700);
+  background-color: var(--orange-100);
+}
+
+.button--secundary:disabled {
+  color: var(--gray-300);
+  background-color: #fff;
+}
+
 .button--outline {
   color: var(--gray-700);
   background-color: #fff;
@@ -212,7 +232,7 @@ button {
 .form-field--inline {
   display: flex;
   flex-direction: row;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .label {
@@ -240,7 +260,7 @@ button {
   color: var(--gray-500);
 }
 
-input,
+input:is([type=text], [type=email], [type=password], [type=search]),
 select,
 textarea {
   background-color: #fff;
@@ -343,6 +363,7 @@ input:invalid:focus-visible {
   border: none;
   box-shadow: none;
 }
+
 :is(.search-wrapper__fields) :is(button, input):focus-visible {
   border: none;
   box-shadow: none;
@@ -374,16 +395,26 @@ input:invalid:focus-visible {
   display: none;
   position: absolute;
   top: 48px;
-  
+
   width: 100%;
   background-color: #fff;
   border-radius: 16px;
   padding: 16px;
 }
 
+.search-wrapper__filters > section {
+  margin-bottom: 16px;
+}
+
 /* GENERAL CLASSES */
 .section__title {
   color: var(--gray-600);
+  margin-bottom: 24px;
+}
+
+.section__subtitle {
+  color: var(--gray-600);
+  margin-bottom: 8px;
 }
 
 /* HERO */
@@ -391,8 +422,7 @@ input:invalid:focus-visible {
 .hero {
   width: 100%;
   height: 400px;
-  background: var(--orange-100) url("../assets/images/girl-headphone.jpg")
-    no-repeat center;
+  background: var(--orange-100) url("../assets/images/girl-headphone.jpg") no-repeat center;
   background-size: cover;
   margin: 16px 0;
 }
@@ -425,8 +455,62 @@ input:invalid:focus-visible {
   margin: auto;
 }
 
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background-color: var(--gray-50);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 4px;
+  max-width: 100%;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  height: 41px;
+  color: var(--gray-700);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked+.name {
+  color: var(--orange-700);
+  background-color: var(--orange-100);
+  font-family: 600;
+}
+
+.form-field--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.form-field--inline .form-field {
+  flex: 1;
+  margin: 0;
+}
+
+
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+
   .container,
   .container-sm {
     width: 540px;
@@ -459,10 +543,15 @@ input:invalid:focus-visible {
   .container-fluid {
     width: 100%;
   }
+
+  .radio-inputs {
+    width: calc(50% - 8px);
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
   .container,
   .container-sm,
   .container-md,
@@ -479,6 +568,7 @@ input:invalid:focus-visible {
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
   .container,
   .container-sm,
   .container-md,
@@ -495,6 +585,7 @@ input:invalid:focus-visible {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+
   .container,
   .container-sm,
   .container-md,
