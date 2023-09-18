@@ -205,6 +205,12 @@ button {
   margin-bottom: 24px;
 }
 
+.form-field--inline {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+}
+
 .label {
   color: var(--gray-700);
   font-weight: 500;
@@ -306,29 +312,30 @@ input:invalid:focus-visible {
 
 /* SEARCHBAR */
 .search-wrapper {
- /*  display: none; */ /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
 
-  padding-top: 75px;
+  padding: 75px 8px 0;
 }
 
 .search-wrapper__fields {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 25px;
 }
 
 .search-wrapper__fields input {
-  width: calc(100% - 140px);
+  width: calc(100% - 150px);
   border: none;
   box-shadow: none;
 }
@@ -338,6 +345,32 @@ input:invalid:focus-visible {
   outline: none;
 }
 
+.search-wrapper__fields button:active {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.search-wrapper__button--filter,
+.search-wrapper__button--submit {
+  height: 41px;
+  border-radius: 25px;
+}
+
+.search-wrapper__dropdown {
+  position: relative;
+}
+
+.search-wrapper__filters {
+  display: none;
+  position: absolute;
+  top: 48px;
+  
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+}
 
 /* GENERAL CLASSES */
 .section__title {
@@ -349,7 +382,8 @@ input:invalid:focus-visible {
 .hero {
   width: 100%;
   height: 400px;
-  background: var(--orange-100) url("../assets/images/girl-headphone.jpg") no-repeat center;
+  background: var(--orange-100) url("../assets/images/girl-headphone.jpg")
+    no-repeat center;
   background-size: cover;
   margin: 16px 0;
 }
@@ -367,6 +401,10 @@ input:invalid:focus-visible {
   width: 100vh;
 }
 
+.show {
+  display: block;
+}
+
 .container,
 .container-sm,
 .container-md,
@@ -380,7 +418,6 @@ input:invalid:focus-visible {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
   .container,
   .container-sm {
     width: 540px;
@@ -417,7 +454,6 @@ input:invalid:focus-visible {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
   .container,
   .container-sm,
   .container-md,
@@ -434,7 +470,6 @@ input:invalid:focus-visible {
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
   .container,
   .container-sm,
   .container-md,
@@ -451,7 +486,6 @@ input:invalid:focus-visible {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-
   .container,
   .container-sm,
   .container-md,
