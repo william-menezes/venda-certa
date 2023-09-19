@@ -326,6 +326,7 @@ input:invalid:focus-visible {
   padding: 4px 14px;
   border: 1px solid;
   border-radius: 16px;
+  white-space: nowrap;
 }
 
 .badge--orange {
@@ -406,14 +407,23 @@ input:invalid:focus-visible {
   margin-bottom: 16px;
 }
 
-/* GENERAL CLASSES */
-section {
-  margin: 16px 0;
+.category {
+  margin-bottom: 16px;
 }
+
+.category__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+}
+
+/* GENERAL CLASSES */
 
 .section__title {
   color: var(--gray-600);
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .section__subtitle {
@@ -429,6 +439,10 @@ section {
   background: var(--orange-100) url("../assets/images/girl-headphone.jpg") no-repeat center;
   background-size: cover;
   margin: 16px 0;
+}
+
+main > section {
+  padding: 0 16px;
 }
 
 /* BOOTSTRAP CLASSES */
