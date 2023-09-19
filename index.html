@@ -24,7 +24,7 @@
     <header>
       <nav class="navbar container">
         <a href="#" class="navbar__logo">
-          <img src="./assets/logo/logo-default.svg" alt="" height="50" />
+          <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50"/>
         </a>
 
         <ul class="navbar__links list--none list--inline">
@@ -38,26 +38,34 @@
           </li>
         </ul>
 
-        <button class="fab fab--md" onclick="modalSearchbar()">
-          <i class="bi bi-search"></i>
-        </button>
+        
 
         <ul class="navbar__cta list--none list--inline">
+          <li>
+            <button class="fab fab--md" onclick="modalSearchbar()">
+              <i class="bi bi-search"></i>
+            </button>
+          </li>
+
           <li class="navbar__link">
             <a href="#" class="link--no-underline"
-              ><i class="bi bi-chat"></i> Chat</a
+              ><i class="bi bi-bag"></i></a
             >
           </li>
           <li class="navbar__link">
             <a href="login.html" class="link--no-underline"
-              ><i class="bi bi-person-circle"></i> Minha conta</a
+              ><i class="bi bi-person-circle"></i></a
             >
+          </li>
+
+          <li>
+            <button class="fab fab--md navbar__toggle" onclick="openHamburgerMenu()">
+              <i class="bi bi-list"></i>
+            </button>
           </li>
         </ul>
 
-        <button class="fab fab--md navbar__toggle">
-          <i class="bi bi-list"></i>
-        </button>
+        
       </nav>
     </header>
 
@@ -198,5 +206,6 @@
 
     <script src="./js/searchbar-modal.js"></script>
     <script src="./js/searchbar-dropdown.js"></script>
+    <script src="./js/hamburger-menu.js"></script>
   </body>
 </html>

@@ -407,6 +407,10 @@ input:invalid:focus-visible {
 }
 
 /* GENERAL CLASSES */
+section {
+  margin: 16px 0;
+}
+
 .section__title {
   color: var(--gray-600);
   margin-bottom: 24px;
@@ -442,6 +446,9 @@ input:invalid:focus-visible {
 
 .show {
   display: block;
+}
+.open {
+  display: flex !important;
 }
 
 .container,
