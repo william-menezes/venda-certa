@@ -24,7 +24,11 @@
     <header>
       <nav class="navbar container">
         <a href="#" class="navbar__logo">
-          <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50"/>
+          <img
+            src="./assets/logo/logo-default.svg"
+            alt="Venda Certa logo"
+            height="50"
+          />
         </a>
 
         <ul class="navbar__links list--none list--inline">
@@ -34,11 +38,9 @@
             >
           </li>
           <li class="navbar__link">
-            <a href="#category" class="link--no-underline">Categorias</a>
+            <a href="#categories" class="link--no-underline">Categorias</a>
           </li>
         </ul>
-
-        
 
         <ul class="navbar__cta list--none list--inline">
           <li>
@@ -48,24 +50,23 @@
           </li>
 
           <li class="navbar__link">
-            <a href="#" class="link--no-underline"
-              ><i class="bi bi-bag"></i></a
-            >
+            <a href="#" class="link--no-underline"><i class="bi bi-bag"></i></a>
           </li>
           <li class="navbar__link">
             <a href="login.html" class="link--no-underline"
-              ><i class="bi bi-person-circle"></i></a
-            >
+              ><i class="bi bi-person-circle"></i
+            ></a>
           </li>
 
           <li>
-            <button class="fab fab--md navbar__toggle" onclick="openHamburgerMenu()">
+            <button
+              class="fab fab--md navbar__toggle"
+              onclick="openHamburgerMenu()"
+            >
               <i class="bi bi-list"></i>
             </button>
           </li>
         </ul>
-
-        
       </nav>
     </header>
 
@@ -74,7 +75,8 @@
         <form method="post">
           <div class="container search-wrapper__button--close">
             <!-- CLOSE MODAL BUTTON -->
-            <button type="button"
+            <button
+              type="button"
               class="fab fab--white fab--xl"
               onclick="closeModalSearchbar()"
             >
@@ -84,7 +86,8 @@
           <div class="container search-wrapper__dropdown">
             <div class="search-wrapper__fields">
               <!-- FILTER BUTTON -->
-              <button type="button"
+              <button
+                type="button"
                 class="search-wrapper__button--filter button--md button-icon--right"
                 onclick="openSearchDrowpdown()"
               >
@@ -101,7 +104,8 @@
               />
 
               <!-- SUBMIT BUTTON -->
-              <button type="submit"
+              <button
+                type="submit"
                 class="search-wrapper__button--submit button--primary button--md fab--sm"
               >
                 <i class="bi bi-search"></i>
@@ -116,11 +120,22 @@
 
                 <div class="radio-inputs">
                   <label class="radio">
-                    <input type="radio" id="title" name="key-word" value="title" checked="" />
+                    <input
+                      type="radio"
+                      id="title"
+                      name="key-word"
+                      value="title"
+                      checked=""
+                    />
                     <span class="name">Título</span>
                   </label>
                   <label class="radio">
-                    <input type="radio" id="description" name="key-word" value="description"/>
+                    <input
+                      type="radio"
+                      id="description"
+                      name="key-word"
+                      value="description"
+                    />
                     <span class="name">Descrição</span>
                   </label>
                 </div>
@@ -198,9 +213,9 @@
       </div> -->
 
       <section class="container">
-        <div id="category" class="category">
+        <div id="categories" class="category">
           <h2 class="section__title">Categorias</h2>
-  
+
           <ul class="category__list list--none list--inline">
             <li class="badge badge--orange">Automóveis</li>
             <li class="badge badge--orange">Imóveis</li>
@@ -220,6 +235,114 @@
       <section class="container">
         <div id="recent-announcements" class="recent-announcements">
           <h2 class="section__title">Anúncios recentes</h2>
+
+          <div class="recent-announcements__list">
+            <a href="" class="product-card link--no-underline">
+              <div class="product-card__thumbnail-wrap">
+                <div class="product-card__image">
+                  <img src="./assets/images/products/macbook.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Macbook Pro 14"</h3>
+                <h3 class="product-card__price">R$ 7.499,99</h3>
+                <p class="product-card__description">Macbook Pro 8GB RAM 256GB SSD</p>
+
+                <button class="button--md button--outline">Comprar</button>
+              </div>
+            </a>
+            <a href="" class="product-card link--no-underline">
+              <div class="product-card__thumbnail-wrap">
+                <div class="product-card__image">
+                  <img src="./assets/images/products/macbook.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Macbook Pro 14"</h3>
+                <h3 class="product-card__price">R$ 7.499,99</h3>
+                <p class="product-card__description">Macbook Pro 8GB RAM 256GB SSD</p>
+
+                <button class="button--md button--outline">Comprar</button>
+              </div>
+            </a>
+            <a href="" class="product-card link--no-underline">
+              <div class="product-card__thumbnail-wrap">
+                <div class="product-card__image">
+                  <img src="./assets/images/products/macbook.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Macbook Pro 14"</h3>
+                <h3 class="product-card__price">R$ 7.499,99</h3>
+                <p class="product-card__description">Macbook Pro 8GB RAM 256GB SSD</p>
+
+                <button class="button--md button--outline">Comprar</button>
+              </div>
+            </a>
+            <a href="" class="product-card link--no-underline">
+              <div class="product-card__thumbnail-wrap">
+                <div class="product-card__image">
+                  <img src="./assets/images/products/macbook.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Macbook Pro 14"</h3>
+                <h3 class="product-card__price">R$ 7.499,99</h3>
+                <p class="product-card__description">Macbook Pro 8GB RAM 256GB SSD</p>
+
+                <button class="button--md button--outline">Comprar</button>
+              </div>
+            </a>
+            <a href="" class="product-card link--no-underline">
+              <div class="product-card__thumbnail-wrap">
+                <div class="product-card__image">
+                  <img src="./assets/images/products/macbook.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Macbook Pro 14"</h3>
+                <h3 class="product-card__price">R$ 7.499,99</h3>
+                <p class="product-card__description">Macbook Pro 8GB RAM 256GB SSD</p>
+
+                <button class="button--md button--outline">Comprar</button>
+              </div>
+            </a>
+            <a href="" class="product-card link--no-underline">
+              <div class="product-card__thumbnail-wrap">
+                <div class="product-card__image">
+                  <img src="./assets/images/products/macbook.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Macbook Pro 14"</h3>
+                <h3 class="product-card__price">R$ 7.499,99</h3>
+                <p class="product-card__description">Macbook Pro 8GB RAM 256GB SSD</p>
+
+                <button class="button--md button--outline">Comprar</button>
+              </div>
+            </a>
+            <a href="" class="product-card link--no-underline">
+              <div class="product-card__thumbnail-wrap">
+                <div class="product-card__image">
+                  <img src="./assets/images/products/macbook.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="product-card__body">
+                <h3 class="product-card__title">Macbook Pro 14"</h3>
+                <h3 class="product-card__price">R$ 7.499,99</h3>
+                <p class="product-card__description">Macbook Pro 8GB RAM 256GB SSD</p>
+
+                <button class="button--md button--outline">Comprar</button>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
     </main>

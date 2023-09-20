@@ -52,6 +52,10 @@
   color: var(--gray-600);
 }
 
+/* body {
+  min-height: 100%;
+} */
+
 h1,
 h2,
 h3,
@@ -403,7 +407,7 @@ input:invalid:focus-visible {
   padding: 16px;
 }
 
-.search-wrapper__filters > section {
+.search-wrapper__filters>section {
   margin-bottom: 16px;
 }
 
@@ -423,7 +427,7 @@ input:invalid:focus-visible {
 
 .section__title {
   color: var(--gray-600);
-  margin-bottom: 8px;
+  margin: 24px 0 16px;
 }
 
 .section__subtitle {
@@ -441,9 +445,83 @@ input:invalid:focus-visible {
   margin: 16px 0;
 }
 
-main > section {
+main>section {
   padding: 0 16px;
 }
+
+.recent-announcements__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px 8px;
+}
+
+.product-card {
+  max-width: calc(50% - 8px);
+}
+
+.product-card__thumbnail-wrap {
+  padding-top: 100%;
+  position: relative;
+  background-color: var(--gray-200);
+  border-radius: 8px;
+}
+
+
+.product-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card__image>img {
+  width: 80%;
+  mix-blend-mode: multiply;
+  transition: all .2s ease-in-out;
+}
+
+.product-card:hover .product-card__image>img {
+  transform: scale(1.1);
+}
+
+.product-card__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card__title {
+  flex-basis: 50%;
+  margin: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-card__price {
+  flex-basis: 50%;
+  text-align: end;
+  margin: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-card__description {
+  flex-basis: 100%;
+  margin: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 /* BOOTSTRAP CLASSES */
 .w-100 {
@@ -461,6 +539,7 @@ main > section {
 .show {
   display: block;
 }
+
 .open {
   display: flex !important;
 }
@@ -521,6 +600,7 @@ main > section {
   flex-wrap: wrap;
   gap: 8px;
 }
+
 .form-field--inline .form-field {
   flex: 1;
   margin: 0;
@@ -543,6 +623,10 @@ main > section {
   .container-xxl,
   .container-fluid {
     width: 100%;
+  }
+
+  .product-card {
+    max-width: calc(33% - 8px);
   }
 }
 
