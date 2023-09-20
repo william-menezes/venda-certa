@@ -412,7 +412,7 @@ input:invalid:focus-visible {
 }
 
 .category {
-  margin-bottom: 16px;
+  margin: 16px 0 32px;
 }
 
 .category__list {
@@ -442,11 +442,15 @@ input:invalid:focus-visible {
   height: 400px;
   background: var(--orange-100) url("../assets/images/girl-headphone.jpg") no-repeat center;
   background-size: cover;
-  margin: 16px 0;
+  margin: 16px 0 32px;
 }
 
 main>section {
   padding: 0 16px;
+}
+
+.recent-announcements {
+  margin: 16px 0 32px;
 }
 
 .recent-announcements__list {
