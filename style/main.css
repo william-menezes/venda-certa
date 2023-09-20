@@ -203,6 +203,10 @@ button {
   background-color: #fff;
 }
 
+.button--secundary i {
+  color: var(--orange-700);
+}
+
 .button--outline {
   color: var(--gray-700);
   background-color: #fff;
@@ -223,6 +227,10 @@ button {
   color: var(--gray-300);
   background-color: #fff;
   border: 1px solid var(--orange-200);
+}
+
+.button--outline i {
+  color: var(--gray-700);
 }
 
 /* FORM */
@@ -302,6 +310,10 @@ input:invalid:focus-visible {
 }
 
 /* BREADCRUMB */
+.breadcrumb {
+  margin: 16px 0 32px;
+}
+
 .breadcrumb__link a {
   color: var(--gray-600);
   font-weight: 500;
@@ -526,6 +538,12 @@ main>section {
   text-overflow: ellipsis;
 }
 
+hr {
+  margin: 16px 0;
+  height: 2px;
+  background: var(--gray-100);
+  border: none;
+}
 
 /* BOOTSTRAP CLASSES */
 .w-100 {
@@ -557,6 +575,7 @@ main>section {
 .container-fluid {
   width: 100%;
   margin: auto;
+  padding: 16px;
 }
 
 .radio-inputs {
@@ -614,97 +633,16 @@ main>section {
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-  .container,
-  .container-sm {
-    width: 540px;
-  }
-
-  .container-md,
-  .container-lg,
-  .container-xl,
-  .container-xxl,
-  .container-fluid {
-    width: 100%;
-  }
-
-  .product-card {
-    max-width: calc(33% - 8px);
-  }
-}
+@media (min-width: 576px) {}
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .hero {
-    border-radius: 16px;
-  }
-
-  .container,
-  .container-sm,
-  .container-md {
-    width: 720px;
-  }
-
-  .container-lg,
-  .container-xl,
-  .container-xxl,
-  .container-fluid {
-    width: 100%;
-  }
-
-  .radio-inputs {
-    width: calc(50% - 8px);
-  }
-}
+@media (min-width: 768px) {}
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg {
-    width: 960px;
-  }
-
-  .container-xl,
-  .container-xxl,
-  .container-fluid {
-    width: 100%;
-  }
-}
+@media (min-width: 992px) {}
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
-  .container-xl {
-    width: 1140px;
-  }
-
-  .container-xxl,
-  .container-fluid {
-    width: 100%;
-  }
-}
+@media (min-width: 1200px) {}
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
-  .container-xl,
-  .container-xxl {
-    width: 1320px;
-  }
-
-  .container-fluid {
-    width: 100%;
-  }
-}
+@media (min-width: 1400px) {}

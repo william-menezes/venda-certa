@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/announcement.css" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/style/navbar.css" />
+    <link rel="stylesheet" href="/style/footer.css" />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/logo/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>Venda Certa</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar container">
+        <a href="index.html" class="navbar__logo">
+          <img
+            src="./assets/logo/logo-default.svg"
+            alt="Venda Certa logo"
+            height="50"
+          />
+        </a>
+
+        <ul class="navbar__links list--none list--inline">
+          <li class="navbar__link">
+            <a href="#recent-announcements" class="link--no-underline"
+              >Anuncios recentes</a
+            >
+          </li>
+          <li class="navbar__link">
+            <a href="#categories" class="link--no-underline">Categorias</a>
+          </li>
+        </ul>
+
+        <ul class="navbar__cta list--none list--inline">
+          <li>
+            <button class="fab fab--md" onclick="modalSearchbar()">
+              <i class="bi bi-search"></i>
+            </button>
+          </li>
+
+          <li class="navbar__link">
+            <a href="#" class="link--no-underline"><i class="bi bi-bag"></i></a>
+          </li>
+          <li class="navbar__link">
+            <a href="login.html" class="link--no-underline"
+              ><i class="bi bi-person-circle"></i
+            ></a>
+          </li>
+
+          <li>
+            <button
+              class="fab fab--md navbar__toggle"
+              onclick="openHamburgerMenu()"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <nav class="container">
+        <ul class="breadcrumb list--none list--inline">
+          <li class="breadcrumb__link">
+            <a class="link--no-underline" href="index.html">Home</a>
+          </li>
+          <li class="breadcrumb__link">
+            <a class="link--no-underline" href="#">Anúncios</a>
+          </li>
+          <li class="breadcrumb__link">
+            <a class="link--no-underline" href="#">Computadores</a>
+          </li>
+          <li class="breadcrumb__link breadcrumb__link--active">
+            <a class="link--no-underline" href="#">Macbook</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="container">
+        <div class="announcement">
+          <div class="announcement__gallery"></div>
+          <div class="announcement__info">
+            <div class="announcement__header">
+              <h2 class="announcement__title">Macbook Pro 14"</h2>
+              <h2 class="announcement__price">R$ 7.499,99</h2>
+              <p class="announcement__description">
+                Macbook Pro 8GB RAM 256GB SSD Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Id laudantium praesentium,
+                ratione, repellat, suscipit temporibus ad voluptatem corrupti
+                deleniti esse velit explicabo nemo doloribus porro voluptatibus
+                possimus doloremque repudiandae adipisci!
+              </p>
+            </div>
+
+            <button class="button--md button--primary">Comprar</button>
+
+            <hr />
+
+            <div class="announcement__seller-wrapper">
+              <h3 class="announcement__seller">Vendedor</h3>
+              <p class="announcement__seller">Fulano de Tal</p>
+
+              <form method="post">
+                <input
+                  class="input--md"
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder="Escreva sua pergunta..."
+                />
+                <button
+                  type="submit"
+                  class="button--md button--outline button-icon--left"
+                >
+                  <i class="bi bi-chat"></i>Chat
+                </button>
+              </form>
+            </div>
+
+            <hr />
+
+            <div class="announcement__location-wrapper">
+              <h3 class="announcement__location">Localização</h3>
+
+              <div class="announcement__location-column">
+                <h4 class="announcement__postal-code-title">CEP</h4>
+                <p class="announcement__postal-code">38400000</p>
+              </div>
+              <div class="announcement__location-column">
+                <h4 class="announcement__city-title">Cidade</h4>
+                <p class="announcement__city">Uberlândia</p>
+              </div>
+              <div class="announcement__location-column">
+                <h4 class="announcement__neighborhood-title">Bairro</h4>
+                <p class="announcement__neighborhood">Centro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer container">
+        <a href="index.html" class="footer__logo">
+          <img
+            src="./assets/logo/logo-dark.svg"
+            alt="Venda Certa logo"
+            height="75"
+          />
+        </a>
+
+        <p class="footer__copyright">
+          © 2023 Venda Certa Ltda. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/searchbar-modal.js"></script>
+    <script src="./js/searchbar-dropdown.js"></script>
+    <script src="./js/hamburger-menu.js"></script>
+  </body>
+</html>
