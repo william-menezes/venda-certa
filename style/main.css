@@ -52,6 +52,31 @@
   color: var(--gray-600);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange-600);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-700);
+}
+
 /* body {
   min-height: 100%;
 } */
@@ -434,7 +459,8 @@ input:invalid:focus-visible {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  overflow: auto;
+  overflow-x: scroll;
+  padding-bottom: 16px;
 }
 
 /* GENERAL CLASSES */
