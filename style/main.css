@@ -410,8 +410,10 @@ input:invalid:focus-visible {
 
 .search-wrapper__filters {
   display: none;
-  position: absolute;
-  top: 48px;
+  /* position: absolute;
+  top: 64px; */
+
+  margin-top: 8px;
 
   width: 100%;
   background-color: #fff;
