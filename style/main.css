@@ -336,7 +336,8 @@ input:invalid:focus-visible {
 
 /* BREADCRUMB */
 .breadcrumb {
-  margin: 16px 0 32px;
+  /* margin: 16px 0; */
+  /* margin: 16px 0 32px; */
 }
 
 .breadcrumb__link a {
