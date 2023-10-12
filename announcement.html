@@ -73,6 +73,126 @@
     </header>
 
     <main>
+      <div id="searchbar" class="search-wrapper">
+        <form method="post">
+          <div class="container search-wrapper__button--close">
+            <!-- CLOSE MODAL BUTTON -->
+            <button
+              type="button"
+              class="fab fab--white fab--xl"
+              onclick="closeModalSearchbar()"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="container search-wrapper__dropdown">
+            <div class="search-wrapper__fields">
+              <!-- FILTER BUTTON -->
+              <button
+                type="button"
+                class="search-wrapper__button--filter button--md button-icon--right"
+                onclick="openSearchDrowpdown()"
+              >
+                Filtrar <i class="bi bi-filter"></i>
+              </button>
+
+              <!-- FILTER INPUT -->
+              <input
+                class="input--md search-wrapper__input"
+                type="text"
+                name="search-input"
+                id="search-input"
+                placeholder="Procurar por..."
+              />
+
+              <!-- SUBMIT BUTTON -->
+              <button
+                type="submit"
+                class="search-wrapper__button--submit button--primary button--md fab--sm"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div id="searchbar-dropdown" class="search-wrapper__filters">
+              <h3 class="section__title">Filtrar por:</h3>
+              <section>
+                <h4 class="section__subtitle">Palavra chave</h4>
+
+                <div class="radio-inputs">
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      id="title"
+                      name="key-word"
+                      value="title"
+                      checked=""
+                    />
+                    <span class="name">Título</span>
+                  </label>
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      id="description"
+                      name="key-word"
+                      value="description"
+                    />
+                    <span class="name">Descrição</span>
+                  </label>
+                </div>
+              </section>
+
+              <section>
+                <h4 class="section__subtitle">Valor</h4>
+
+                <div class="form-field--inline">
+                  <div class="form-field">
+                    <label for="min-value">Mínimo</label>
+                    <input
+                      class="input--md"
+                      type="text"
+                      name="min-value"
+                      id="min-value"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label for="max-value">Máximo</label>
+                    <input
+                      class="input--md"
+                      type="text"
+                      name="max-value"
+                      id="max-value"
+                    />
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h4 class="section__subtitle">Categoria</h4>
+
+                <div class="form-field">
+                  <select class="input--md" name="category" id="category">
+                    <option value="">Todas as categorias</option>
+                    <option value="automoveis">Automóveis</option>
+                    <option value="imoveis">Imóveis</option>
+                    <option value="eletronicos">Eletrônicos</option>
+                    <option value="celulares">Celulares</option>
+                    <option value="moda">Moda</option>
+                    <option value="beleza">Beleza</option>
+                    <option value="esporte">Esporte</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="musica">Música</option>
+                    <option value="hobbies">Hobbies</option>
+                    <option value="artigos-infantis">Artigos infantis</option>
+                  </select>
+                </div>
+              </section>
+            </div>
+          </div>
+        </form>
+      </div>
+
       <nav class="container">
         <ul class="breadcrumb list--none list--inline">
           <li class="breadcrumb__link">
@@ -93,25 +213,72 @@
       <section class="container">
         <div class="announcement">
           <div class="announcement__wrapper">
-            <div class="announcement__gallery">
-              <div class="gallery__main-img" class="active">
-                <img src="assets/images/products/macbook.jpg" alt="" />
+            <div class="gallery__main-img">
+              <div class="mySlides">
+                <img src="assets/images/products/macbook.jpg" />
               </div>
-              <ul class="gallery__miniatures-wrapper">
-                <li class="gallery__miniatures">
-                  <img src="assets/images/products/macbook.jpg" src="" alt="" onclick="currentSlide(1)" />
-                </li>
-                <li class="gallery__miniatures">
-                  <img src="assets/images/products/macbook.jpg" src="" alt=""/>
-                </li>
-                <li class="gallery__miniatures">
-                  <img src="assets/images/products/macbook.jpg" src="" alt=""/>
-                </li>
-                <li class="gallery__miniatures">
-                  <img src="assets/images/products/macbook.jpg" src="" alt=""/>
-                </li>
-              </ul>
+    
+              <div class="mySlides">
+                <img src="assets/images/products/iphone.jpg" />
+              </div>
+    
+              <div class="mySlides">
+                <img src="assets/images/products/ipad-pro.jpeg" />
+              </div>
+    
+              <div class="mySlides">
+                <img src="assets/images/products/macbook.jpg" />
+              </div>
+    
+              <div class="mySlides">
+                <img src="assets/images/products/iphone.jpg" />
+              </div>
+    
+              <div class="mySlides">
+                <img src="assets/images/products/ipad-pro.jpeg" />
+              </div>
             </div>
+    
+            <ul class="gallery__miniatures-wrapper list--none">
+              <li class="gallery__miniatures cursor" onclick="currentSlide(1)">
+                <img class="demo" src="assets/images/products/macbook.jpg" alt="" />
+              </li>
+              <li class="gallery__miniatures cursor" onclick="currentSlide(2)">
+                <img
+                  class="demo cursor"
+                  src="assets/images/products/iphone.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="gallery__miniatures cursor" onclick="currentSlide(3)">
+                <img
+                  class="demo"
+                  src="assets/images/products/ipad-pro.jpeg"
+                  alt=""
+                />
+              </li>
+              <li class="gallery__miniatures cursor" onclick="currentSlide(4)">
+                <img
+                  class="demo"
+                  src="assets/images/products/macbook.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="gallery__miniatures cursor" onclick="currentSlide(5)">
+                <img
+                  class="demo"
+                  src="assets/images/products/iphone.jpg"
+                  alt=""
+                />
+              </li>
+              <li class="gallery__miniatures cursor" onclick="currentSlide(6)">
+                <img
+                  class="demo"
+                  src="assets/images/products/ipad-pro.jpeg"
+                  alt=""
+                />
+              </li>
+            </ul>
           </div>
 
           <div class="announcement__info">
@@ -131,29 +298,6 @@
 
             <hr />
 
-            <div class="announcement__seller-wrapper">
-              <h3 class="announcement__seller">Vendedor</h3>
-              <p class="announcement__seller">Fulano de Tal</p>
-
-              <form method="post">
-                <input
-                  class="input--md"
-                  type="text"
-                  name="message"
-                  id="message"
-                  placeholder="Escreva sua pergunta..."
-                />
-                <button
-                  type="submit"
-                  class="button--md button--outline button-icon--left"
-                >
-                  <i class="bi bi-chat"></i>Chat
-                </button>
-              </form>
-            </div>
-
-            <hr />
-
             <div class="announcement__location-wrapper">
               <h3 class="announcement__location">Localização</h3>
 
@@ -170,8 +314,37 @@
                 <p class="announcement__neighborhood">Centro</p>
               </div>
             </div>
+
+            <div class="announcement__seller-wrapper">
+              <hr />
+              <h3 class="announcement__seller">Vendedor</h3>
+              <p class="announcement__seller">Fulano de Tal</p>
+            </div>
+            <div class="chat">
+              <hr />
+              <h3>Pergunte ao vendedor</h3>
+              <form method="post">
+                <input
+                  class="input--md"
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder="Escreva sua pergunta..."
+                />
+                <button
+                  type="submit"
+                  class="button--md button--outline button-icon--left"
+                >
+                  <i class="bi bi-chat"></i>Enviar
+                </button>
+              </form>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section class="container">
+        
       </section>
     </main>
     <footer>
