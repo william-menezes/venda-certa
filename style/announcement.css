@@ -29,7 +29,6 @@ main {
 .mySlides>img,
 .gallery__miniatures>img {
     width: 80%;
-    max-height: 80%;
     mix-blend-mode: multiply;
 }
 
