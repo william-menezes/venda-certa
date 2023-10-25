@@ -543,7 +543,7 @@ main>section {
 }
 
 .product-card__title {
-  flex-basis: 50%;
+  flex-basis: 100%;
   margin: 8px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -551,8 +551,8 @@ main>section {
 }
 
 .product-card__price {
-  flex-basis: 50%;
-  text-align: end;
+  flex-basis: 100%;
+  /* text-align: end; */
   margin: 8px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -562,9 +562,13 @@ main>section {
 .product-card__description {
   flex-basis: 100%;
   margin: 8px 0;
-  white-space: nowrap;
+  /* white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 
 hr {
