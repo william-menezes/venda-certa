@@ -481,9 +481,25 @@ input:invalid:focus-visible {
 .hero {
   width: 100%;
   height: 400px;
-  background: var(--orange-100) url("../assets/images/girl-headphone.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/girl-headphone.jpg") no-repeat center;
   background-size: cover;
   margin: 16px 0 32px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.hero__title,
+.hero__subtitle {
+  color: #fff;
 }
 
 main>section {
@@ -567,7 +583,7 @@ main>section {
   text-overflow: ellipsis; */
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
@@ -689,6 +705,7 @@ hr {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .hero {
+    justify-content: center;
     border-radius: 16px;
   }
 
