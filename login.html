@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/style/main.css" />
-    <link rel="stylesheet" href="/style/login.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/login.css" />
 
     <link
       rel="shortcut icon"
@@ -51,7 +51,7 @@
                 name="email"
                 required
               />
-              <span class="error-message" aria-live="polite"></span>
+              <span class="hint hint--error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="password">Senha</label>
@@ -62,7 +62,7 @@
                 name="password"
                 required
               />
-              <span class="error-message" aria-live="polite"></span>
+              <span class="hint hint--error" aria-live="polite"></span>
             </div>
             <button class="button--md button--primary w-100" type="submit">
               Entrar
@@ -75,5 +75,7 @@
       </section>
       <section class="container--right"></section>
     </main>
+
+    <script src="./js/login-form-validation.js"></script>
   </body>
 </html>

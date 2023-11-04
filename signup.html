@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/style/main.css" />
-    <link rel="stylesheet" href="/style/login.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/login.css" />
 
     <link
       rel="shortcut icon"
@@ -49,8 +49,10 @@
                 type="text"
                 id="name"
                 name="name"
+                minlength="4"
                 required
               />
+              <span class="hint hint--error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="cpf">CPF</label>
@@ -61,6 +63,7 @@
                 name="cpf"
                 required
               />
+              <span class="hint hint--error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="email">E-mail</label>
@@ -71,6 +74,7 @@
                 name="email"
                 required
               />
+              <span class="hint hint--error" aria-live="polite"></span>
             </div>
             <div class="form-field">
               <label for="password">Senha</label>
@@ -81,6 +85,7 @@
                 name="password"
                 required
               />
+              <span class="hint hint--error" aria-live="polite"></span>
             </div>
             <button class="button--md button--primary w-100" type="submit">
               Cadastre-se
@@ -93,5 +98,7 @@
       </section>
       <section class="container--right"></section>
     </main>
+
+    <script src="./js/signup-form-validation.js"></script>
   </body>
 </html>
