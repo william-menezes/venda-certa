@@ -73,7 +73,12 @@
 
     <main>
       <div id="searchbar" class="search-wrapper">
-        <form method="post">
+        <form
+          name="formSearch"
+          action="php/search.php"
+          method="post"
+          novalidate
+        >
           <div class="container search-wrapper__button--close">
             <!-- CLOSE MODAL BUTTON -->
             <button
@@ -195,7 +200,10 @@
       <section class="container">
         <div class="hero">
           <h1 class="hero__title">Venda Certa</h1>
-          <p class="hero__subtitle">A plataforma que facilita a vida de compradores e vendedores em um único lugar.</p>
+          <p class="hero__subtitle">
+            A plataforma que facilita a vida de compradores e vendedores em um
+            único lugar.
+          </p>
         </div>
       </section>
 

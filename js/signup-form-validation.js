@@ -88,13 +88,3 @@ function isValidCPF(cpf) {
 
   return !(rest(10, 2) !== validator[0] || rest(11, 1) !== validator[1]);
 }
-
-const cpf = document.getElementById("cpf");
-cpf.addEventListener("keyup", formatarCPF);
-function formatarCPF(e) {
-  let v = e.target.value.replace(/\D/g, "");
-  v = v.replace(/(\d{3})(\d)/, "$1.$2");
-  v = v.replace(/(\d{3})(\d)/, "$1.$2");
-  v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-  e.target.value = v;
-}
