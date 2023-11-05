@@ -3,7 +3,7 @@
 function exitWhenNotLoggedIn()
 { 
   if (!isset($_SESSION['loggedIn'])) {
-    header("Location: /index.php");
+    header("location: ../index.php");
     exit();  
   }
 }

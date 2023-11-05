@@ -3,9 +3,9 @@ require('./php/mysqlConnection.php');
 
 $pdo = mysqlConnect();
 
-$warning = <<<WARNING
+/* $warning = <<<WARNING
     <span class="hint--error" aria-live="polite">Usuário ou senha inválidos</span>
-    WARNING;
+    WARNING; */
 
 try {
     $sql = <<<SQL

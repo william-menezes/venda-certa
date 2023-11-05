@@ -146,9 +146,17 @@ h5 {
   text-decoration: none;
 }
 
+.link-as-button {
+  border-radius: 8px !important;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 /* BUTTONS */
 button {
-  border-radius: 8px;
+  border-radius: 8px !important;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -518,6 +526,8 @@ input:invalid:focus-visible {
 /* GENERAL CLASSES */
 
 .section__title {
+  font-size: 24px;
+  font-weight: bold;
   color: var(--gray-600);
   margin: 24px 0 16px;
 }

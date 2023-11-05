@@ -41,8 +41,12 @@ header {
     padding: 0.5rem;
 }
 
-.navbar__link:hover > .link--no-underline,
-.link--no-underline:hover > * {
+.navbar__link a:active {
+    background: #fff !important;
+}
+
+.navbar__link:hover>.link--no-underline,
+.link--no-underline:hover>* {
     color: var(--orange-600);
 }
 
@@ -56,10 +60,12 @@ header {
     .navbar__cta {
         order: 3;
     }
+
     .navbar__links {
         order: 2;
         width: max-content;
     }
+
     .navbar__links {
         flex-direction: row;
     }

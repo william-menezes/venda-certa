@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const cep = document.getElementById("cep");
   const minValue = document.getElementById("min-value");
   const maxValue = document.getElementById("max-value");
+  const price = document.getElementById("price");
 
   if (cpf) cpf.addEventListener("keyup", formatCPF);
 
@@ -14,6 +15,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (minValue) minValue.addEventListener("keyup", formatCurrency);
 
   if (maxValue) maxValue.addEventListener("keyup", formatCurrency);
+
+  if (price) price.addEventListener("keyup", formatCurrency);
 
   function formatCPF(e) {
     let v = e.target.value.replace(/\D/g, "");

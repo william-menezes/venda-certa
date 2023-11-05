@@ -42,6 +42,15 @@ CREATE TABLE BaseEnderecosAjax(
     Estado varchar(30)
 ) ENGINE=InnoDB;
 
+CREATE TABLE interesse(
+    Codigo int PRIMARY KEY auto_increment,
+    Mensagem varchar(200),
+    DataHora datetime,
+    Contato varchar(50),
+    CodAnuncio int not null,
+    FOREIGN KEY (CodAnuncio) REFERENCES anuncio(Codigo)
+) ENGINE=InnoDB;
+
 INSERT INTO anunciante VALUES (1, 'Altrano', '111.111.111-11', 'altrano@mail.com', '$2y$10$uJMQPr3dXwuMib1gjYFazOUbHl8vJ926PZGQquNoe7P5vbrlaZmL6', '34-9999-9991');
 INSERT INTO anunciante VALUES (2, 'Beltrano', '222.222.222-22', 'beltrano@mail.com', '$2y$10$uJMQPr3dXwuMib1gjYFazOUbHl8vJ926PZGQquNoe7P5vbrlaZmL6', '34-9999-9992');
 INSERT INTO anunciante VALUES (3, 'Ciclano', '333.333.333-33', 'ciclano@mail.com', '$2y$10$uJMQPr3dXwuMib1gjYFazOUbHl8vJ926PZGQquNoe7P5vbrlaZmL6', '34-9999-9993');
