@@ -30,6 +30,18 @@
   --red-900: #7a271a;
   --red-950: #55160c;
 
+  --green-25: #f6fef9;
+  --green-50: #ecfdf3;
+  --green-100: #d1fadf;
+  --green-200: #a6f4c5;
+  --green-300: #6ce9a6;
+  --green-400: #32d583;
+  --green-500: #12b76a;
+  --green-600: #039855;
+  --green-700: #027a48;
+  --green-800: #05603a;
+  --green-900: #054f31;
+
   --gray-25: #fcfcfd;
   --gray-50: #f9fafb;
   --gray-100: #f2f4f7;
@@ -80,6 +92,39 @@ html {
 /* body {
   min-height: 100%;
 } */
+
+.message {
+  width: 100%;
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message>p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+/* .message .close-button {
+  cursor: pointer;
+}
+
+.message .close-button > i {
+  color: inherit;
+} */
+
+.message--warning {
+  background-color: var(--red-50);
+}
+
+.message--warning>p {
+  color: var(--red-700);
+}
 
 h1,
 h2,
@@ -185,6 +230,13 @@ button {
 
 .fab:hover i {
   color: var(--orange-600);
+}
+
+.fab--warning i {
+  color: var(--red-700);
+}
+.fab--warning:hover i {
+  color: var(--red-800);
 }
 
 .button--primary {

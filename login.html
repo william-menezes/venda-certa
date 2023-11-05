@@ -71,6 +71,20 @@
           <p class="form-wrapper__link">
             Não tem uma conta? <a href="./signup.html">Cadastre-se</a>
           </p>
+
+          <?php if($_GET['login'] == 'erro1'){ ?>
+
+          <span class="message message--warning">
+            <p class="message__text">Usuário ou senha inválidos!</p>
+            <button
+              class="fab--warning fab--sm fab"
+              onclick="this.parentElement.style.display='none';"
+            >
+              <i class="bi bi-x"></i>
+            </button>
+          </span>
+
+          <?php } ?>
         </div>
       </section>
       <section class="container--right"></section>
