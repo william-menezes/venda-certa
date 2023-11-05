@@ -77,7 +77,7 @@ try {
 
     <main>
         <div id="searchbar" class="search-wrapper">
-            <form name="formSearch" action="php/search.php" method="post" novalidate>
+            <form name="formSearch" action=".php/search-validation.php"  method="post" novalidate>
                 <div class="container search-wrapper__button--close">
                     <!-- CLOSE MODAL BUTTON -->
                     <button type="button" class="fab fab--white fab--xl" onclick="closeModalSearchbar()">
@@ -125,10 +125,12 @@ try {
                                 <div class="form-field">
                                     <label for="min-value">Mínimo</label>
                                     <input class="input--md" type="text" name="min-value" id="min-value" />
+                                    <span class="hint hint--error" aria-live="polite"></span>
                                 </div>
                                 <div class="form-field">
                                     <label for="max-value">Máximo</label>
                                     <input class="input--md" type="text" name="max-value" id="max-value" />
+                                    <span class="hint hint--error" aria-live="polite"></span>
                                 </div>
                             </div>
                         </section>
@@ -143,7 +145,7 @@ try {
                                     <?php
                                     foreach ($categories as $category) {
                                         echo <<<HTML
-                                            <option value="$category->id">$category->nome</option>
+                                            <option value="$category->codigo">$category->nome</option>
                                         HTML;
                                     }
                                     ?>
@@ -344,6 +346,7 @@ try {
 
     <script src="./js/searchbar-modal.js"></script>
     <script src="./js/searchbar-dropdown.js"></script>
+    <script src="./js/search-validation.js"></script>
     <script src="./js/hamburger-menu.js"></script>
     <script src="./js/input-masks.js"></script>
 </body>

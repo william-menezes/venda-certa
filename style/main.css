@@ -263,7 +263,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .form-field--inline {

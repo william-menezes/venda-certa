@@ -6,22 +6,24 @@ main {
 }
 .container--left {
   width: 100%;
-  height: 100%;
-  padding: 16px;
+  /* height: 100%; */
+  padding: 8px;
 
   display: flex;
   align-items: center;
+  overflow: auto;
 }
 
 .form-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 36px 0;
+
+  /* padding: 36px 0; */
 }
 
 .return__link {
-  align-self: center;
-  margin-bottom: 42px;
+  /* align-self: center; */
+  margin-bottom: 36px;
 }
 
 .form-wrapper__title {
@@ -35,7 +37,7 @@ main {
 }
 
 .form-wrapper__link {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .container--right {

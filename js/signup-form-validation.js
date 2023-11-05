@@ -6,11 +6,13 @@ function validateForm(e) {
 
   const hintName = form.name.nextElementSibling;
   const hintCPF = form.cpf.nextElementSibling;
+  const hintPhone = form.phone.nextElementSibling;
   const hintEmail = form.email.nextElementSibling;
   const hintPassword = form.password.nextElementSibling;
 
   hintName.textContent = "";
   hintCPF.textContent = "";
+  hintPhone.textContent = "";
   hintEmail.textContent = "";
   hintPassword.textContent = "";
 
@@ -23,6 +25,11 @@ function validateForm(e) {
   if (form.cpf.value === "" || !isValidCPF(form.cpf.value)) {
     hintCPF.style.display = "block";
     hintCPF.textContent = "Digite um CPF válido.";
+    formIsValid = false;
+  }
+  if (form.phone.value === "") {
+    hintPhone.style.display = "block";
+    hintPhone.textContent = "Este campo é de preenchimento obrigatório.";
     formIsValid = false;
   }
   if (form.email.value === "" || !isValidEmail(form.email.value)) {
