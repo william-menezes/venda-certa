@@ -37,5 +37,5 @@ if (checkLogin($pdo, $email, $password)) {
     header("location: ../dashboard.php");
     exit();
 } else {
-    header("location: ../login.html?error=1");
+    header("location: ../login.php?error=1");
 }

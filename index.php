@@ -63,7 +63,7 @@ try {
                     <a href="#" class="link--no-underline"><i class="bi bi-bag"></i></a>
                 </li>
                 <li class="navbar__link">
-                    <a href="login.html" class="link--no-underline"><i class="bi bi-person-circle"></i></a>
+                    <a href="login.php" class="link--no-underline"><i class="bi bi-person-circle"></i></a>
                 </li>
 
                 <li>

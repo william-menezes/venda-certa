@@ -38,7 +38,7 @@
           <form
             class="w-100"
             name="formLogin"
-            action="php/login.php"
+            action="php/loginValidation.php"
             method="post"
             novalidate
           >
@@ -72,7 +72,7 @@
             Não tem uma conta? <a href="./signup.html">Cadastre-se</a>
           </p>
 
-          <?php if($_GET['login'] == 'erro1'){ ?>
+          <?php if(isset($_GET['error']) && $_GET['error']){ ?>
 
           <span class="message message--warning">
             <p class="message__text">Usuário ou senha inválidos!</p>
