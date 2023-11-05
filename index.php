@@ -39,7 +39,7 @@ try {
 <body>
     <header>
         <nav class="navbar container">
-            <a href="index.html" class="navbar__logo">
+            <a href="index.php" class="navbar__logo">
                 <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50" />
             </a>
 
@@ -334,7 +334,7 @@ try {
 
     <footer>
         <div class="footer container">
-            <a href="index.html" class="footer__logo">
+            <a href="index.php" class="footer__logo">
                 <img src="./assets/logo/logo-dark.svg" alt="Venda Certa logo" height="75" />
             </a>
 
