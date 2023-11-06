@@ -11,7 +11,7 @@ function checkLogin($pdo, $email, $password)
     $sql = <<<SQL
         SELECT SenhaHash 
         FROM Anunciante
-        WHERE email = ?
+        WHERE Email = ?
     SQL;
 
     try {
@@ -30,7 +30,7 @@ function getUserName($pdo, $email) {
     $sql = <<<SQL
         SELECT Nome
         FROM Anunciante
-        WHERE email = ?
+        WHERE Email = ?
     SQL;
 
     try {

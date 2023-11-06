@@ -16,7 +16,7 @@ try {
 
     //Verifica se o anunciante já é cadastrado
     $selectSql = <<<SQL
-                    SELECT Email, CPF FROM anunciante
+                    SELECT Email, CPF FROM Anunciante
                     WHERE Email = ? OR Cpf = ?
                 SQL;
     $stmt = $pdo->prepare($selectSql);
@@ -33,7 +33,7 @@ try {
 
     //Cadastra um novo anunciante
     $sql = <<<SQL
-            INSERT INTO anunciante (Nome, CPF, Email, SenhaHash, Telefone)
+            INSERT INTO Anunciante (Nome, CPF, Email, SenhaHash, Telefone)
             VALUES (?, ?, ?, ?, ?)
         SQL;
 
@@ -62,6 +62,6 @@ try {
         exit('Dados duplicados: ' . $e->getMessage());
     } else {
         http_response_code(400);
-        exit('Falha ao cadastrar os dadosab: ' . $e->getMessage());
+        exit('Falha ao cadastrar os dados: ' . $e->getMessage());
     }
 }

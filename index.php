@@ -3,13 +3,9 @@ require('./php/mysqlConnection.php');
 
 $pdo = mysqlConnect();
 
-/* $warning = <<<WARNING
-    <span class="hint--error" aria-live="polite">Usuário ou senha inválidos</span>
-    WARNING; */
-
 try {
     $sql = <<<SQL
-            SELECT codigo, nome FROM categoria
+            SELECT Codigo, Nome FROM Categoria
         SQL;
 
     $stmt = $pdo->query($sql);
@@ -145,7 +141,7 @@ try {
                                     <?php
                                     foreach ($categories as $category) {
                                         echo <<<HTML
-                                            <option value="$category->codigo">$category->nome</option>
+                                            <option value="$category->Codigo">$category->Nome</option>
                                         HTML;
                                     }
                                     ?>
@@ -175,7 +171,7 @@ try {
                     <?php
                     foreach ($categories as $category)
                         echo <<<HTML
-                            <li class="badge badge--orange">$category->nome</li>
+                            <li class="badge badge--orange">$category->Nome</li>
                         HTML;
                     ?>
                 </ul>
@@ -187,7 +183,7 @@ try {
                 <h2 class="section__title">Anúncios recentes</h2>
 
                 <div class="recent-announcements__list">
-                    <a href="announcement.html" class="product-card link--no-underline">
+                    <a href="announcement.php" class="product-card link--no-underline">
                         <div class="product-card__thumbnail-wrap">
                             <div class="product-card__image">
                                 <img src="./assets/images/products/macbook.jpg" alt="" />
@@ -207,7 +203,7 @@ try {
                             <!-- <button class="button--md button--outline">Comprar</button> -->
                         </div>
                     </a>
-                    <a href="announcement.html" class="product-card link--no-underline">
+                    <a href="announcement.php" class="product-card link--no-underline">
                         <div class="product-card__thumbnail-wrap">
                             <div class="product-card__image">
                                 <img src="./assets/images/products/macbook.jpg" alt="" />
@@ -227,7 +223,7 @@ try {
                             <!-- <button class="button--md button--outline">Comprar</button> -->
                         </div>
                     </a>
-                    <a href="announcement.html" class="product-card link--no-underline">
+                    <a href="announcement.php" class="product-card link--no-underline">
                         <div class="product-card__thumbnail-wrap">
                             <div class="product-card__image">
                                 <img src="./assets/images/products/macbook.jpg" alt="" />
@@ -247,7 +243,7 @@ try {
                             <!-- <button class="button--md button--outline">Comprar</button> -->
                         </div>
                     </a>
-                    <a href="announcement.html" class="product-card link--no-underline">
+                    <a href="announcement.php" class="product-card link--no-underline">
                         <div class="product-card__thumbnail-wrap">
                             <div class="product-card__image">
                                 <img src="./assets/images/products/macbook.jpg" alt="" />
@@ -267,7 +263,7 @@ try {
                             <!-- <button class="button--md button--outline">Comprar</button> -->
                         </div>
                     </a>
-                    <a href="announcement.html" class="product-card link--no-underline">
+                    <a href="announcement.php" class="product-card link--no-underline">
                         <div class="product-card__thumbnail-wrap">
                             <div class="product-card__image">
                                 <img src="./assets/images/products/macbook.jpg" alt="" />
@@ -287,7 +283,7 @@ try {
                             <!-- <button class="button--md button--outline">Comprar</button> -->
                         </div>
                     </a>
-                    <a href="announcement.html" class="product-card link--no-underline">
+                    <a href="announcement.php" class="product-card link--no-underline">
                         <div class="product-card__thumbnail-wrap">
                             <div class="product-card__image">
                                 <img src="./assets/images/products/macbook.jpg" alt="" />
@@ -307,7 +303,7 @@ try {
                             <!-- <button class="button--md button--outline">Comprar</button> -->
                         </div>
                     </a>
-                    <a href="announcement.html" class="product-card link--no-underline">
+                    <a href="announcement.php" class="product-card link--no-underline">
                         <div class="product-card__thumbnail-wrap">
                             <div class="product-card__image">
                                 <img src="./assets/images/products/macbook.jpg" alt="" />
