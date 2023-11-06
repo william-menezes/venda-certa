@@ -332,13 +332,13 @@ try {
         </section>
     </main>
 
-    <footer>
-        <div class="footer container">
+    <footer class="footer--primary">
+        <div class="footer__content container">
             <a href="index.php" class="footer__logo">
                 <img src="./assets/logo/logo-dark.svg" alt="Venda Certa logo" height="75" />
             </a>
 
-            <p class="footer__copyright">
+            <p class="footer__copyright--primary">
                 © 2023 Venda Certa Ltda. Todos os direitos reservados.
             </p>
         </div>

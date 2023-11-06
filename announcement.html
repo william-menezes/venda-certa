@@ -35,12 +35,12 @@
 
         <ul class="navbar__links list--none list--inline">
           <li class="navbar__link">
-            <a href="#recent-announcements" class="link--no-underline"
+            <a href="index.php#recent-announcements" class="link--no-underline"
               >Anúncios recentes</a
             >
           </li>
           <li class="navbar__link">
-            <a href="#categories" class="link--no-underline">Categorias</a>
+            <a href="index.php#categories" class="link--no-underline">Categorias</a>
           </li>
         </ul>
 
@@ -55,7 +55,7 @@
             <a href="#" class="link--no-underline"><i class="bi bi-bag"></i></a>
           </li>
           <li class="navbar__link">
-            <a href="login.html" class="link--no-underline"
+            <a href="login.php" class="link--no-underline"
               ><i class="bi bi-person-circle"></i
             ></a>
           </li>
@@ -199,7 +199,9 @@
             <a class="link--no-underline" href="index.php">Home</a>
           </li>
           <li class="breadcrumb__link">
-            <a class="link--no-underline" href="index.php#recent-announcements">Anúncios recentes</a>
+            <a class="link--no-underline" href="index.php#recent-announcements"
+              >Anúncios recentes</a
+            >
           </li>
           <li class="breadcrumb__link breadcrumb__link--active">
             <a class="link--no-underline" href="#">Macbook</a>
@@ -214,31 +216,35 @@
               <div class="mySlides">
                 <img src="assets/images/products/macbook.jpg" />
               </div>
-    
+
               <div class="mySlides">
                 <img src="assets/images/products/iphone.jpg" />
               </div>
-    
+
               <div class="mySlides">
                 <img src="assets/images/products/ipad-pro.jpeg" />
               </div>
-    
+
               <div class="mySlides">
                 <img src="assets/images/products/macbook.jpg" />
               </div>
-    
+
               <div class="mySlides">
                 <img src="assets/images/products/iphone.jpg" />
               </div>
-    
+
               <div class="mySlides">
                 <img src="assets/images/products/ipad-pro.jpeg" />
               </div>
             </div>
-    
+
             <ul class="gallery__miniatures-wrapper list--none">
               <li class="gallery__miniatures cursor" onclick="currentSlide(1)">
-                <img class="demo" src="assets/images/products/macbook.jpg" alt="" />
+                <img
+                  class="demo"
+                  src="assets/images/products/macbook.jpg"
+                  alt=""
+                />
               </li>
               <li class="gallery__miniatures cursor" onclick="currentSlide(2)">
                 <img
@@ -340,12 +346,10 @@
         </div>
       </section>
 
-      <section class="container">
-        
-      </section>
+      <section class="container"></section>
     </main>
-    <footer>
-      <div class="footer container">
+    <footer class="footer--primary">
+      <div class="footer__content container">
         <a href="index.php" class="footer__logo">
           <img
             src="./assets/logo/logo-dark.svg"
@@ -354,7 +358,7 @@
           />
         </a>
 
-        <p class="footer__copyright">
+        <p class="footer__copyright--primary">
           © 2023 Venda Certa Ltda. Todos os direitos reservados.
         </p>
       </div>

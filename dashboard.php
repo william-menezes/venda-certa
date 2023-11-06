@@ -3,7 +3,7 @@ require "./php/sessionVerification.php";
 
 session_start();
 exitWhenNotLoggedIn();
-/* $userName = $_SESSION['nome']; */
+$userName = $_SESSION['user'];
 $email = $_SESSION['email'];
 ?>
 
@@ -29,14 +29,14 @@ $email = $_SESSION['email'];
 
 <body>
     <header>
-        <nav class="navbar container">
-            <a href="dashboard.php" class="navbar__logo">
+        <nav class="container d-flex justify-content-between">
+            <a href="dashboard.php" class="navbar__logo m-0">
                 <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50" />
             </a>
 
-            <div class="dropdown navbar__cta">
-                <button class="fab fab--md dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-circle me-1"></i>
+            <div class="dropdown navbar__cta m-0">
+                <button class="button--md button--transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle me-1"></i> <?php echo "$userName"?>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
@@ -45,15 +45,15 @@ $email = $_SESSION['email'];
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="#my-announcements">Meus anúncios</a></li>
-                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="#">Mensagens</a></li>
-                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="#">Perfil</a></li>
+                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./dashboard.php#my-announcements">Meus anúncios</a></li>
+                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./dashboard.php#my-messages">Mensagens</a></li>
+                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./my-profile.php">Meu perfil</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li class="navbar__link">
                         <?php echo <<<HTML
-                            <a class="dropdown-item link--no-underline" href="./php/logout.php">Sair</a>
+                            <a class="dropdown-item link--no-underline" href="./php/logout.php"><i class="bi bi-box-arrow-right"></i> Sair</a>
                         HTML ?>
                     </li>
                 </ul>
@@ -72,65 +72,71 @@ $email = $_SESSION['email'];
 
         <section class="container pt-0">
             <h2 class="section__title">Meus anúncios</h2>
-            
+
             <div id="my-announcements" class="card p-4">
                 <a class="ms-auto link-as-button button--md button--primary button-icon--let" href="./new-announcement.php">
                     <i class="bi bi-plus"></i> Novo anúncio
                 </a>
+                <div class="table-responsive">
 
-                <table class="table table-hover mt-4">
-                    <thead class="table-light">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Título</th>
-                            <!-- <th scope="col">Descrição</th> -->
-                            <th scope="col">Preço</th>
-                            <th scope="col">Data/Hora</th>
-                        </tr>
-                    </thead>
+                    <table class="table table-hover mt-4">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Título</th>
+                                <!-- <th scope="col">Descrição</th> -->
+                                <th scope="col">Preço</th>
+                                <th scope="col">Data/Hora</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Monitor de 22 Full HD</td>
-                            <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
-                            <td>650.00</td>
-                            <td>2023-11-03 20:29:06</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Monitor de 22 Full HD</td>
-                            <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
-                            <td>650.00</td>
-                            <td>2023-11-03 20:29:06</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Monitor de 22 Full HD</td>
-                            <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
-                            <td>650.00</td>
-                            <td>2023-11-03 20:29:06</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Monitor de 22 Full HD</td>
-                            <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
-                            <td>650.00</td>
-                            <td>2023-11-03 20:29:06</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Monitor de 22 Full HD</td>
+                                <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
+                                <td>650.00</td>
+                                <td>2023-11-03 20:29:06</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Monitor de 22 Full HD</td>
+                                <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
+                                <td>650.00</td>
+                                <td>2023-11-03 20:29:06</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Monitor de 22 Full HD</td>
+                                <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
+                                <td>650.00</td>
+                                <td>2023-11-03 20:29:06</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Monitor de 22 Full HD</td>
+                                <!-- <th>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</th> -->
+                                <td>650.00</td>
+                                <td>2023-11-03 20:29:06</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-
         </section>
     </main>
 
-    <!-- <?php
-            echo "<h1>Dashboard</h1>";
-            echo "Bem-vindo, $userName";
-            echo "Seu email é $email";
-            ?> -->
+    <footer class="footer--secundary">
+        <div class="footer__content container">
+            <a href="dashboard.php" class="footer__logo">
+                <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50" />
+            </a>
+
+            <p class="footer__copyright--secundary m-0">
+                © 2023 Venda Certa Ltda. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

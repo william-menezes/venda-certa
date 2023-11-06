@@ -243,6 +243,7 @@ button {
 .fab--warning i {
   color: var(--red-700);
 }
+
 .fab--warning:hover i {
   color: var(--red-800);
 }
@@ -316,6 +317,16 @@ button {
 
 .button--outline i {
   color: var(--gray-700);
+}
+
+.button--transparent {
+  background: transparent;
+  border: none;
+}
+
+.button--transparent:hover,
+.button--transparent:hover i {
+  color: var(--orange-600);
 }
 
 /* FORM */

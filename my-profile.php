@@ -7,18 +7,6 @@ exitWhenNotLoggedIn();
 $userName = $_SESSION['user'];
 $email = $_SESSION['email'];
 
-$pdo = mysqlConnect();
-
-try {
-    $sql = <<<SQL
-            SELECT codigo, nome FROM categoria
-        SQL;
-
-    $stmt = $pdo->query($sql);
-    $categories = $stmt->fetchAll(PDO::FETCH_OBJ);
-} catch (Exception $e) {
-    exit('Ocorreu uma falha: ' . $e->getMessage());
-}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +26,7 @@ try {
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Novo anúncio</title>
+    <title>Minha conta</title>
 </head>
 
 <body>
@@ -82,103 +70,58 @@ try {
                 </li>
 
                 <li class="breadcrumb__link breadcrumb__link--active">
-                    <a class="link--no-underline" href="#">Criar anúncio</a>
+                    <a class="link--no-underline" href="#">Meu perfil</a>
                 </li>
             </ul>
         </nav>
 
         <section class="container pt-0">
-            <div id="new-announcement" class="">
+            <div id="my-profile" class="">
 
-                <h2 class="section__title mt-0">Criar anúncio</h2>
+                <h2 class="section__title mt-0">Meu perfil</h2>
 
-                <form class="w-100 card p-3" name="formNewAnnouncement" action="php/newAnnouncementValidation.php" enctype="multipart/form-data" method="post" novalidate>
-
+                <form class="w-100 card p-3" name="formMyProfile" action="php/myProfileValidation.php" method="post" novalidate>
                     <div class="form-field col-12">
-                        <label for="title">Título</label>
-                        <input class="input--md" type="text" id="title" name="title" required />
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
-
-                    <div class="form-field col-12">
-                        <label for="description">Descrição</label>
-                        <textarea class="input--md" name="description" id="description" cols="30" rows="10" required></textarea>
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
-
-
-                    <div class="form-field">
-                        <label for="category">Categoria</label>
-                        <select class="input--md" name="category" id="category">
-                            <option value="">Todas as categorias</option>
-
-                            <?php
-                            foreach ($categories as $category) {
-                                echo <<<HTML
-                                            <option value="$category->codigo">$category->nome</option>
-                                        HTML;
-                            }
-                            ?>
-                        </select>
-                    </div>
-
-                    <div class="form-field col-12">
-                        <label for="price">Preço (R$)</label>
-                        <input class="input--md" type="text" id="price" name="price" required>
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="pictures">Fotos</label>
-                        <input class="form-control" type="file" id="pictures" accept="image/*" multiple>
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
-
-                    <div class="form-field col-12">
-                        <label for="cep">CEP</label>
-                        <input class="input--md" type="text" id="cep" name="cep" maxlength="9" required>
+                        <label for="name">Nome</label>
+                        <input class="input--md" type="text" id="name" name="name" required />
                         <span class="hint hint--error" aria-live="polite"></span>
                     </div>
                     <div class="form-field col-12">
-                        <label for="district">Bairro</label>
-                        <input class="input--md" type="text" id="district" name="district" required>
+                        <label for="cpf">CPF</label>
+                        <input class="input--md" type="text" id="cpf" name="cpf" required />
                         <span class="hint hint--error" aria-live="polite"></span>
                     </div>
                     <div class="form-field col-12">
-                        <label for="city">Cidade</label>
-                        <input class="input--md" type="text" id="city" name="city" required>
+                        <label for="phone">Telefone</label>
+                        <input class="input--md" type="text" id="phone" name="phone" required />
                         <span class="hint hint--error" aria-live="polite"></span>
                     </div>
                     <div class="form-field col-12">
-                        <label for="state">Estado</label>
-                        <input class="input--md" type="text" id="state" name="state" required>
+                        <label for="password">Senha</label>
+                        <input class="input--md" type="password" id="password" name="password" required />
                         <span class="hint hint--error" aria-live="polite"></span>
                     </div>
 
-                    <button class="button--md button--primary ms-auto" type="submit">Anunciar</button>
+                    <button class="button--md button--primary ms-auto" type="submit">Salvar alterações</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer class="footer--secundary">
-      <div class="footer__content container">
-        <a href="dashboard.php" class="footer__logo">
-          <img
-            src="./assets/logo/logo-default.svg"
-            alt="Venda Certa logo"
-            height="50"
-          />
-        </a>
+        <div class="footer__content container">
+            <a href="dashboard.php" class="footer__logo">
+                <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50" />
+            </a>
 
-        <p class="footer__copyright--secundary m-0">
-          © 2023 Venda Certa Ltda. Todos os direitos reservados.
-        </p>
-      </div>
+            <p class="footer__copyright--secundary m-0">
+                © 2023 Venda Certa Ltda. Todos os direitos reservados.
+            </p>
+        </div>
     </footer>
 
+    <script src="./js/my-profile-form-validation.js"></script>
     <script src="./js/input-masks.js"></script>
-    <script src="./js/new-announcement-form-validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
