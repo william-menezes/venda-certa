@@ -43,14 +43,14 @@ try {
 
 <body>
     <header>
-    <nav class="container d-flex justify-content-between">
+        <nav class="container d-flex justify-content-between">
             <a href="dashboard.php" class="navbar__logo m-0">
                 <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50" />
             </a>
 
             <div class="dropdown navbar__cta m-0">
                 <button class="button--md button--transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-circle me-1"></i> <?php echo "$userName"?>
+                    <i class="bi bi-person-circle me-1"></i> <?php echo "$userName" ?>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
@@ -60,7 +60,7 @@ try {
                         <hr class="dropdown-divider">
                     </li>
                     <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./dashboard.php#my-announcements">Meus anúncios</a></li>
-                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./dashboard.php#my-messages">Mensagens</a></li>
+                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./messages.php">Mensagens</a></li>
                     <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./my-profile.php">Meu perfil</a></li>
                     <li>
                         <hr class="dropdown-divider">
@@ -162,19 +162,15 @@ try {
     </main>
 
     <footer class="footer--secundary">
-      <div class="footer__content container">
-        <a href="dashboard.php" class="footer__logo">
-          <img
-            src="./assets/logo/logo-default.svg"
-            alt="Venda Certa logo"
-            height="50"
-          />
-        </a>
+        <div class="footer__content container">
+            <a href="dashboard.php" class="footer__logo">
+                <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50" />
+            </a>
 
-        <p class="footer__copyright--secundary m-0">
-          © 2023 Venda Certa Ltda. Todos os direitos reservados.
-        </p>
-      </div>
+            <p class="footer__copyright--secundary m-0">
+                © 2023 Venda Certa Ltda. Todos os direitos reservados.
+            </p>
+        </div>
     </footer>
 
     <script src="./js/input-masks.js"></script>

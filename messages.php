@@ -26,19 +26,19 @@ $email = $_SESSION['email'];
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Minha conta</title>
+    <title>Mensagens</title>
 </head>
 
 <body>
     <header>
-    <nav class="container d-flex justify-content-between">
+        <nav class="container d-flex justify-content-between">
             <a href="dashboard.php" class="navbar__logo m-0">
                 <img src="./assets/logo/logo-default.svg" alt="Venda Certa logo" height="50" />
             </a>
 
             <div class="dropdown navbar__cta m-0">
                 <button class="button--md button--transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-circle me-1"></i> <?php echo "$userName"?>
+                    <i class="bi bi-person-circle me-1"></i> <?php echo "$userName" ?>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
@@ -48,7 +48,7 @@ $email = $_SESSION['email'];
                         <hr class="dropdown-divider">
                     </li>
                     <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./dashboard.php#my-announcements">Meus anúncios</a></li>
-                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./messages.php">Mensagens</a></li>
+                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="#">Mensagens</a></li>
                     <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./my-profile.php">Meu perfil</a></li>
                     <li>
                         <hr class="dropdown-divider">
@@ -70,7 +70,7 @@ $email = $_SESSION['email'];
                 </li>
 
                 <li class="breadcrumb__link breadcrumb__link--active">
-                    <a class="link--no-underline" href="#">Meu perfil</a>
+                    <a class="link--no-underline" href="#">Minhas mensagens</a>
                 </li>
             </ul>
         </nav>
@@ -78,32 +78,62 @@ $email = $_SESSION['email'];
         <section class="container pt-0">
             <div id="my-profile" class="">
 
-                <h2 class="section__title mt-0">Meu perfil</h2>
+                <h2 class="section__title mt-0">Minhas mensagens</h2>
 
-                <form class="w-100 card p-3" name="formMyProfile" action="php/myProfileValidation.php" method="post" novalidate>
-                    <div class="form-field col-12">
-                        <label for="name">Nome</label>
-                        <input class="input--md" type="text" id="name" name="name" required />
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
-                    <div class="form-field col-12">
-                        <label for="cpf">CPF</label>
-                        <input class="input--md" type="text" id="cpf" name="cpf" required />
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
-                    <div class="form-field col-12">
-                        <label for="phone">Telefone</label>
-                        <input class="input--md" type="text" id="phone" name="phone" required />
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
-                    <div class="form-field col-12">
-                        <label for="password">Senha</label>
-                        <input class="input--md" type="password" id="password" name="password" required />
-                        <span class="hint hint--error" aria-live="polite"></span>
-                    </div>
+<!-- 
+    Codigo int PRIMARY KEY auto_increment,
+    Mensagem varchar(200),
+    DataHora datetime,
+    Contato varchar(50),
+    CodAnuncio int not null,
+ -->
 
-                    <button class="button--md button--primary ms-auto" type="submit">Salvar alterações</button>
-                </form>
+                <div class="card p-3">
+                    <div class="table-responsive">
+                        <table class="table table-hover mt-4">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Mensagem</th>
+                                    <th scope="col">Contato</th>
+                                    <th scope="col">Anúncio</th>
+                                    <th scope="col">Data/Hora</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Monitor de 22 Full HD</td>
+                                    <td>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</td>
+                                    <td>650.00</td>
+                                    <td>2023-11-03 20:29:06</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Monitor de 22 Full HD</td>
+                                    <td>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</td>
+                                    <td>650.00</td>
+                                    <td>2023-11-03 20:29:06</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Monitor de 22 Full HD</td>
+                                    <td>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</td>
+                                    <td>650.00</td>
+                                    <td>2023-11-03 20:29:06</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Monitor de 22 Full HD</td>
+                                    <td>Vendo um monitor Full HD de 22 polegadas, black piano, com 6 meses de uso, marca X, sem detalhes.</td>
+                                    <td>650.00</td>
+                                    <td>2023-11-03 20:29:06</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

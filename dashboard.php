@@ -46,7 +46,7 @@ $email = $_SESSION['email'];
                         <hr class="dropdown-divider">
                     </li>
                     <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./dashboard.php#my-announcements">Meus anúncios</a></li>
-                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./dashboard.php#my-messages">Mensagens</a></li>
+                    <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./messages.php">Mensagens</a></li>
                     <li class="navbar__link"><a class="dropdown-item link--no-underline" href="./my-profile.php">Meu perfil</a></li>
                     <li>
                         <hr class="dropdown-divider">
@@ -71,7 +71,7 @@ $email = $_SESSION['email'];
         </nav>
 
         <section class="container pt-0">
-            <h2 class="section__title">Meus anúncios</h2>
+            <h2 class="section__title mt-0">Meus anúncios</h2>
 
             <div id="my-announcements" class="card p-4">
                 <a class="ms-auto link-as-button button--md button--primary button-icon--let" href="./new-announcement.php">
